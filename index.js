@@ -7,10 +7,11 @@ wallets = [];
 for (let i = 0; i < COUNTS; i++) {
   const wallet = ethers.Wallet.createRandom();
   wallets.push(wallet);
+  console.log(`${wallet.address},${wallet.privateKey},0`);
 }
 
 const csv = wallets
-  .map((wallet) => `${wallet.address},${wallet.privateKey}`)
+  .map((wallet) => `${wallet.address},${wallet.privateKey},0`)
   .join("\n");
 
 // Write CSV to file
