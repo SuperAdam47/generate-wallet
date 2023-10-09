@@ -10,7 +10,7 @@ for (let i = 0; i < COUNTS; i++) {
   console.log(`${wallet.address},${wallet.privateKey},0`);
 }
 
-const csv = wallets
+const csv = "address,private_key,balance\n" + wallets
   .map((wallet) => `${wallet.address},${wallet.privateKey},0`)
   .join("\n");
 
